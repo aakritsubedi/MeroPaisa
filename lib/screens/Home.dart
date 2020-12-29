@@ -1,3 +1,4 @@
+import 'package:MeroPaisa/widgets/AppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -15,12 +16,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Text(widget.title),
-      ),
+      body: Container(
+        margin: EdgeInsets.only(top: 8.0),
+        child: ListView(
+          physics: ClampingScrollPhysics(),
+          children: [
+            MyAppbar()
+          ],
+        ),
+      )
     );
   }
 }
